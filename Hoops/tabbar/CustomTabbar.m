@@ -17,5 +17,14 @@
     // Drawing code
 }
 */
-
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CGPoint cen= obj.center;
+        cen.y+=5;
+        obj.center = cen;
+    }];
+    
+}
 @end
